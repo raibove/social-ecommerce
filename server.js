@@ -27,7 +27,7 @@ app.use('/api', require('./routes/poll'))
 
 
 // Connect to mongodb
-const URI = 'mongodb://localhost:27017/social_commerce'
+const URI = process.env.MONGODB_URL
 mongoose.connect(URI, {
     useCreateIndex: true,
     useFindAndModify: false,
